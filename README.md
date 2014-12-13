@@ -7,7 +7,8 @@ This is a resource function created for hapi.js in order to in order to reduce t
 
 Given an API controller:
 
-`var PostsController = {
+`
+var PostsController = {
 
   index: function(request, reply) {
    ....
@@ -20,7 +21,8 @@ Given an API controller:
   create: function(request, reply) {
     .....
   },  
-}`
+}
+`
 
 Instead of writing:
 
