@@ -3,6 +3,10 @@ hapi-resource
 
 This is a resource function created for hapi.js in order to in order to reduce the amount of boilerplate code when writing hapi routes.
 
+###INSTALLATION
+
+`npm install hapi-resource`
+
 ##USAGE
 
 Given an API controller:
@@ -23,6 +27,16 @@ var PostsController = {
   },  
 }
 ```
+you can now write:
+
+```javascript
+server.route(
+  resource({
+    name: 'post',
+    controller: PostsController
+  })
+);
+```
 
 Instead of writing:
 
@@ -40,16 +54,6 @@ hapiServer.route([
   },
   ...
 ]);
-```
-you can write:
-
-```javascript
-server.route(
-  resource({
-    name: 'post',
-    controller: PostsController
-  })
-);
 ```
 
 You can also easily namespace your routes:
