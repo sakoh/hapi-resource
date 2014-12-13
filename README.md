@@ -5,7 +5,8 @@ This is a resource function created for hapi.js in order to in order to reduce t
 
 ##USAGE
 
-Given an API controller
+Given an API controller:
+
 `var PostsController = {
 
   index: function(request, reply) {
