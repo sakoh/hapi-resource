@@ -7,7 +7,7 @@ This is a resource function created for hapi.js in order to in order to reduce t
 
 Given an API controller:
 
-`
+```javascript
 var PostsController = {
 
   index: function(request, reply) {
@@ -22,11 +22,11 @@ var PostsController = {
     .....
   },  
 }
-`
+```
 
 Instead of writing:
 
-`
+```javascript
 hapiServer.route([
   {
     method : "GET",
@@ -40,21 +40,21 @@ hapiServer.route([
   },
   ...
 ]);
-`
+```
 you can write:
 
-`
+```javascript
 server.route(
   resource({
     name: 'post',
     controller: PostsController
   })
 );
-`
+```
 
 You can also easily namespace your routes:
 
-`
+```javascript
 
 var resource = require('hapi-resource');
 
@@ -66,11 +66,11 @@ server.route(
   })
 );
 
-`
+```
 
 is equivalent to:
 
-`
+```javascript
 hapiServer.route([
   {
     method : "GET",
@@ -84,5 +84,5 @@ hapiServer.route([
   },
   ...
 ]);
-`
+```
 
